@@ -1,15 +1,23 @@
 const DOMselectors = {
   header: document.querySelector("h1"),
-  description: document.querySelector("card-desc"),
+  description: document.querySelector(".card-desc"),
   items: document.querySelector("li"),
+  form: document.querySelector("form"),
 };
 
-console.log(DOMselectors.header);
 function take() {
-  let form = document.querySelector("name");
-  form.addEventListener("enter", function (event) {
+  let form = DOMselectors.form;
+  let formdata = [
+    document.querySelector("#inputv"),
+    document.querySelector("#inputx"),
+    document.querySelector("#inputz"),
+  ];
+  form.addEventListener("submit", function (event) {
     event.preventDefault();
-    console.log(event.target);
+    for (let i = 1; i < 3; i++) {
+      console.log(formdata[i - 1].value);
+    }
   });
 }
+
 take();

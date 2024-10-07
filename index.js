@@ -14,7 +14,7 @@ function take() {
   ];
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-    for (let i = 1; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
       console.log(formdata[i - 1].value);
     }
   });

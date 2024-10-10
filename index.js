@@ -1,13 +1,13 @@
 const DOMselectors = {
-  header: document.querySelector("h1"),
+  header: document.querySelector("h2"),
+  picture: document.querySelectorAll("picture"),
   description: document.querySelector(".card-desc"),
-  items: document.querySelector("li"),
   form: document.querySelector("form"),
 };
 
 function take() {
-  let form = DOMselectors.form;
-  let formdata = [
+  const form = DOMselectors.form;
+  const formdata = [
     document.querySelector("#inputv"),
     document.querySelector("#inputx"),
     document.querySelector("#inputz"),
@@ -15,23 +15,20 @@ function take() {
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-    console.log(formdata[0].value, formdata[1].value, formdata[2].value);
+    const name = formdata[0].value;
+    const picture = formdata[1].value;
+    const desc = formdata[2].value;
+    const formObject = createObject(name, picture, desc);
+    console.log(formObject);
   });
 }
 
-take();
-
-function createUserObject(name, picture, desc) {
+function createObject(name, picture, desc) {
   return {
     name: name,
     picture: picture,
     desc: desc,
-    greet: function () {
-      console.log(
-        `Hello, my name is ${this.name} and I am ${this.age} years old.`
-      );
-    },
   };
 }
 
-createUserObject();
+document.addEventListener("DOMContentLoaded", take);

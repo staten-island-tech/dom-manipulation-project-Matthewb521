@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: "Protest Guerrilla", sans-serif;
+}
+
+.card {
+  width: 20%;
+  height: 30rem;
+  margin: 1rem;
+  border: 2px solid azure;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  background-image: url(Images/background.png);
+  background-size: cover;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.5s ease;
+}

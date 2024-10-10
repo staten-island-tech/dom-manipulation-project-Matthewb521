@@ -2,20 +2,51 @@
   <head>
     <link rel="stylesheet" href="style.css" />
     <title>mywebsite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1>Hello</h1>
-    <form method="get">
-      <label>
-        Name:
-        <input name="submitted-name" id="inputv" autocomplete="name" />
-        Picture-link:
-        <input name="submitted-name" id="inputx" autocomplete="name" />
-        desc:
-        <input name="submitted-name" id="inputz" autocomplete="name" />
-        <input type="submit" name="Enter" />
-      </label>
+    <form action="/action_page.php" method="get">
+      <label for="inputv">Name:</label>
+      <input
+        type="text"
+        id="inputv"
+        name="submitted-name"
+        autocomplete="name"
+      /><br /><br />
+
+      <label for="inputx">Picture-link:</label>
+      <input
+        type="text"
+        id="inputx"
+        name="submitted-picture"
+        autocomplete="picture"
+      /><br /><br />
+
+      <label for="inputz">Description:</label>
+      <input
+        type="text"
+        id="inputz"
+        name="submitted-desc"
+        autocomplete="desc"
+      /><br /><br />
+
+      <input type="submit" value="Enter" />
     </form>
+    <div class="card">
+      <h2>Name</h2>
+      <img
+        src="https://th.bing.com/th?id=OIP.jmMrTb1h_-ITFtCqj9mXFwHaJQ&w=223&h=279&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+        alt=""
+      />
+      <h3>desc</h3>
+      <button>Remove</button>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

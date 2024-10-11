@@ -23,7 +23,7 @@ function take() {
     const cardHTML = `
       <div class="card card-ani">
         <h2>${formObject.name}</h2>
-        <img src="${formObject.picture}" alt="Image of ${formObject.name}" />
+        <img class"images" src="${formObject.picture}" alt="Image of ${formObject.name}" />
         <h3>${formObject.desc}</h3>
         <button class="remove-btn">Remove</button>
       </div>

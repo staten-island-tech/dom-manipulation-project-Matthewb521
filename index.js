@@ -28,7 +28,7 @@ function addCard() {
     <h2>${formObject.name}</h2>
     <img class="images" src="${formObject.picture}" alt="Image of ${formObject.name}" />
     <h3>${formObject.desc}</h3>
-    <button class="remove-btn">Remove</button>
+    <button class="remove-btn button-ani">Remove</button>
   </div>
   `;
 
